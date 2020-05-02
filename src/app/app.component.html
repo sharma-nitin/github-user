@@ -1,0 +1,11 @@
+
+<div class="row m-none container">
+
+  <div class="col-md-4 m-bottom">
+    <app-github-userlist (selectedUser)="selectedUser($event)"></app-github-userlist>
+  </div>
+  <div class="col-md-8 m-bottom ">
+     <app-github-userdetail [selectedUser]="user"></app-github-userdetail>
+  </div>
+
+</div>

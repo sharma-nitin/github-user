@@ -1,0 +1,12 @@
+<div class="user-detail">
+  <img src="{{selectedUser.avatar_url}} alt='user'" width="100px" height="100px">
+  <div>{{selectedUser.login | titlecase}} - Repositories</div>
+</div>
+
+<div class="detail-view">
+  <div class="user-repo " *ngFor="let repo of userRepos">
+    <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+    <p *ngIf="repo.description!==null">{{repo.description}}</p>
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+
+<app-search-users (searchValue)="searchedUsers($event)"></app-search-users>
+<div class="list-view" *ngIf="filteredUsers.length>0">
+  <div class="user-item" [ngClass]="{selected: user.login===selected}" *ngFor="let user of filteredUsers" (click)="userSelected(user)">
+    {{user.login | titlecase}}
+  </div>
+</div>
+<div class="list-view" *ngIf="filteredUsers.length==0">
+ <p>No user Found..</p>
+</div>
+
